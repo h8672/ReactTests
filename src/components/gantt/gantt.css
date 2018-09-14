@@ -1,0 +1,94 @@
+.gantt-background {
+  position: absolute;
+  top: 0;
+  background: gray;
+  width: 100%;
+  height: 100%;
+}
+.gantt {
+  margin: auto;
+  width: 100%;
+  max-width: 1080px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 480px) {
+  .gantt {
+    min-width: 240px;
+    background-color: lightgreen;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+  .gantt {
+    min-width: 480px;
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1080px) {
+  .gantt {
+    min-width: 800px;
+    background-color: orange;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .gantt {
+    min-width: 1080px;
+    background-color: red;
+  }
+}
+
+.gantt-nav {
+  position: relative;
+  margin: auto;
+}
+.gantt-left {
+  position: relative;
+  float: left;
+  transform: translateX(0%);
+  transition: transform .5s;
+}
+.gantt-right {
+  position: relative;
+  float: right;
+  transform: translateX(0%);
+  transition: transform .5s;
+}
+
+.gantt-tools {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: 60px;
+  grid-gap: 1px;
+  border: 2px solid black;
+  background-color: black;
+}
+.gantt-tool {
+  display: block;
+  background-color: rgba(255,255,255, 0.6);
+  width: 60px; height: 60px;
+}
+
+.gantt-content {
+  position: relative;
+  height: 100%;
+  margin: auto;
+  overflow: scroll;
+  background: teal;
+}
+
+.gantt-grid {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(999999, 1mm);
+  grid-template-rows: repeat(40, 1mm);
+  /* background: radial-gradient(circle, lightgray, white); */
+  background: linear-gradient(lightgray, gray, lightgray);
+  background-repeat: repeat;
+  background-size: 1mm 5mm;
+}
+.gantt-grid-item {
+  /* background: radial-gradient(circle, gray, white, gray); */
+  border-radius: 50%;
+  background-color: red;
+  grid-column: span 4;
+  grid-row: span 2;
+}

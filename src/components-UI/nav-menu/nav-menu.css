@@ -1,0 +1,48 @@
+/* Nav colors and styles */
+.nav-menu {
+  display: grid;
+  grid-template-columns: 320px;
+  grid-template-rows: 30px auto 30px;
+  grid-row-gap: 5px;
+  background-color: teal;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+}
+.nav-menu :nth-child(2) {
+  background-color: white;
+}
+
+.nav-menu-body {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  box-shadow: 0 0 5px black;
+}
+
+.nav-menu-header { margin: 0; border-top: 1px dotted black; }
+.nav-menu-header:first-of-type { border-top: 0; }
+
+.nav-menu-group { display: grid; }
+
+/* Nav animations and positions */
+.nav-menu {
+  position: absolute;
+}
+.nav-menu:hover .nav-menu-body {
+  max-height: 160px;
+  animation: slideFromLeft 1s;
+}
+.nav-menu-body {
+  overflow: hidden;
+  max-height: 0;
+  animation: slideToLeft 1s;
+  transition: max-height 1s;
+}
+
+@keyframes slideFromLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0%); opacity: 1; }
+}
+@keyframes slideToLeft {
+  from { transform: translateX(0%); opacity: 1; }
+  to { transform: translateX(-100%); opacity: 0; }
+}

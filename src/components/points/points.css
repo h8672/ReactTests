@@ -1,0 +1,103 @@
+.points {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 15px;
+}
+
+.points-tab {
+  margin: auto;
+  margin-top: 12px;
+  width: 360px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+}
+
+.points-users { margin: auto; }
+.points-user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5px;
+}
+.points-user-selected {
+  background-color: #0000dd;
+  color: rgba(255,255,255,0.9);
+}
+
+.points-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+.points-values-item {
+  margin: 0; padding: 5px; border: 0;
+  background: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  font-weight: bold;
+}
+.points-values-selected { background-color: black; }
+.points-values-item:nth-of-type(2) { color: green; }
+.points-values-item:nth-of-type(3) { color: red; }
+
+.points-user-add {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5px;
+}
+.points-input {
+  width: 120px;
+  text-align: center;
+}
+
+.points-change {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-gap: 5px;
+  width: 300px;
+  margin: auto;
+  border-radius: 12px;
+  background-color: lightgray;
+  padding: 12px;
+  /* box-shadow: 0 0 50px black; */
+}
+
+.points-change-display {
+  width: 120px;
+  margin: auto;
+  text-align: center;
+}
+.points-change-display[type=number] {
+  color: black;
+  font-weight: bold;
+  background: rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.points-change-range {
+  width: 80px; height: 80px; border-radius: 40px;
+  background-color: blue;
+  transform: rotate(0deg);
+  transition: transform .5s;
+  background: radial-gradient(circle, blue 20%, darkblue, blue 40%, darkblue 95%);
+  margin: auto;
+  box-shadow: 0 0 5px black;
+}
+.points-change-range-thumb {
+  width: 12px; height: 12px; border-radius: 6px;
+  margin: auto;
+  transform: translateY(40%);
+  background: radial-gradient(circle, white, darkblue);
+}
+
+.points-change-toggles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+  width: 120px; height: 80px;
+  border-radius: 40%;
+  overflow: hidden;
+  margin: auto;
+}
+.points-change-toggles * {}
